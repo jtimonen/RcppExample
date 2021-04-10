@@ -7,13 +7,13 @@
 
 Installation:
 
-```{R}
+```{r}
 devtools::install_github('jtimonen/RcppExample')
 ```
 
 Example use:
 
-```{R}
+```{r}
 library(RcppExample)
 hello_world() # prints message to standard output stream
 
