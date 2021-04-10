@@ -7,13 +7,13 @@
 
 Installation:
 
-```R
+```{R}
 devtools::install_github('jtimonen/RcppExample')
 ```
 
 Example use:
 
-```R
+```{R}
 library(RcppExample)
 hello_world() # prints message to standard output stream
 
@@ -23,5 +23,5 @@ A <- arma_3_matrices(c(1,2))
 # Returns a list with length 2, so that
 # - B[[1]] is a 2x2 matrix
 # - B[[2]] is a 3x2 matrix
-B <- eigen_2_matrices() # dim(A) is c(2,2,3)
+B <- eigen_2_matrices()
 ```
