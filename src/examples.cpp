@@ -7,7 +7,7 @@ using namespace Rcpp;
 //' @export
 // [[Rcpp::export]]
 void hello_world() {
-  Rcpp:Rcout << "Hello world!\n";
+  Rcpp::Rcout << "Hello world!\n";
 }
 
 // [[Rcpp::export]]
