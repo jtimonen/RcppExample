@@ -6,6 +6,15 @@
 
 using namespace Rcpp;
 
+// hello_world
+void hello_world();
+RcppExport SEXP _RcppExample_hello_world() {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    hello_world();
+    return R_NilValue;
+END_RCPP
+}
 // rcpparma_hello_world
 arma::mat rcpparma_hello_world();
 RcppExport SEXP _RcppExample_rcpparma_hello_world() {
@@ -51,6 +60,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_RcppExample_hello_world", (DL_FUNC) &_RcppExample_hello_world, 0},
     {"_RcppExample_rcpparma_hello_world", (DL_FUNC) &_RcppExample_rcpparma_hello_world, 0},
     {"_RcppExample_rcpparma_outerproduct", (DL_FUNC) &_RcppExample_rcpparma_outerproduct, 1},
     {"_RcppExample_rcpparma_innerproduct", (DL_FUNC) &_RcppExample_rcpparma_innerproduct, 1},
