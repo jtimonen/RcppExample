@@ -1,10 +1,7 @@
 ## Example R-package using Rcpp
 
-* Edit the help file skeletons in 'man', possibly combining help files for multiple functions.
-* Edit the exports in 'NAMESPACE', and add necessary imports.
-* Put any C/C++/Fortran code in 'src'.
-* If you have compiled code, add a useDynLib() directive to 'NAMESPACE'.
+* C++ code files are in 'src'.
+* Code that uses only basic `Rcpp` is in `src/examples.cpp`
+* Code that uses `RcppArmadillo` is in `src/examples_arma.cpp`
 * Run R CMD build to build the package tarball.
 * Run R CMD check to check the package tarball.
-
-Read "Writing R Extensions" for more information.
