@@ -2,6 +2,7 @@
 // Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #include <RcppArmadillo.h>
+#include <RcppEigen.h>
 #include <Rcpp.h>
 
 using namespace Rcpp;
@@ -15,56 +16,80 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _RcppExample_rcpparma_hello_world() {
+// std_vector_example
+std::vector<int> std_vector_example();
+RcppExport SEXP _RcppExample_std_vector_example() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
+    rcpp_result_gen = Rcpp::wrap(std_vector_example());
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _RcppExample_rcpparma_outerproduct(SEXP xSEXP) {
+// arma_outerproduct
+arma::mat arma_outerproduct(const arma::colvec& x);
+RcppExport SEXP _RcppExample_arma_outerproduct(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
+    rcpp_result_gen = Rcpp::wrap(arma_outerproduct(x));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _RcppExample_rcpparma_innerproduct(SEXP xSEXP) {
+// arma_3_matrices
+arma::Cube<double> arma_3_matrices(const arma::colvec& x);
+RcppExport SEXP _RcppExample_arma_3_matrices(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
+    rcpp_result_gen = Rcpp::wrap(arma_3_matrices(x));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _RcppExample_rcpparma_bothproducts(SEXP xSEXP) {
+// arma_innerproduct
+double arma_innerproduct(const arma::colvec& x);
+RcppExport SEXP _RcppExample_arma_innerproduct(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    rcpp_result_gen = Rcpp::wrap(arma_innerproduct(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// arma_fastLm
+Rcpp::List arma_fastLm(const arma::mat& X, const arma::colvec& y);
+RcppExport SEXP _RcppExample_arma_fastLm(SEXP XSEXP, SEXP ySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type X(XSEXP);
+    Rcpp::traits::input_parameter< const arma::colvec& >::type y(ySEXP);
+    rcpp_result_gen = Rcpp::wrap(arma_fastLm(X, y));
+    return rcpp_result_gen;
+END_RCPP
+}
+// eigen_2_matrices
+std::vector<Eigen::MatrixXd> eigen_2_matrices();
+RcppExport SEXP _RcppExample_eigen_2_matrices() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(eigen_2_matrices());
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
     {"_RcppExample_hello_world", (DL_FUNC) &_RcppExample_hello_world, 0},
-    {"_RcppExample_rcpparma_hello_world", (DL_FUNC) &_RcppExample_rcpparma_hello_world, 0},
-    {"_RcppExample_rcpparma_outerproduct", (DL_FUNC) &_RcppExample_rcpparma_outerproduct, 1},
-    {"_RcppExample_rcpparma_innerproduct", (DL_FUNC) &_RcppExample_rcpparma_innerproduct, 1},
-    {"_RcppExample_rcpparma_bothproducts", (DL_FUNC) &_RcppExample_rcpparma_bothproducts, 1},
+    {"_RcppExample_std_vector_example", (DL_FUNC) &_RcppExample_std_vector_example, 0},
+    {"_RcppExample_arma_outerproduct", (DL_FUNC) &_RcppExample_arma_outerproduct, 1},
+    {"_RcppExample_arma_3_matrices", (DL_FUNC) &_RcppExample_arma_3_matrices, 1},
+    {"_RcppExample_arma_innerproduct", (DL_FUNC) &_RcppExample_arma_innerproduct, 1},
+    {"_RcppExample_arma_fastLm", (DL_FUNC) &_RcppExample_arma_fastLm, 2},
+    {"_RcppExample_eigen_2_matrices", (DL_FUNC) &_RcppExample_eigen_2_matrices, 0},
     {NULL, NULL, 0}
 };
 

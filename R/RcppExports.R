@@ -5,19 +5,27 @@ hello_world <- function() {
     invisible(.Call(`_RcppExample_hello_world`))
 }
 
-rcpparma_hello_world <- function() {
-    .Call(`_RcppExample_rcpparma_hello_world`)
+std_vector_example <- function() {
+    .Call(`_RcppExample_std_vector_example`)
 }
 
-rcpparma_outerproduct <- function(x) {
-    .Call(`_RcppExample_rcpparma_outerproduct`, x)
+arma_outerproduct <- function(x) {
+    .Call(`_RcppExample_arma_outerproduct`, x)
 }
 
-rcpparma_innerproduct <- function(x) {
-    .Call(`_RcppExample_rcpparma_innerproduct`, x)
+arma_3_matrices <- function(x) {
+    .Call(`_RcppExample_arma_3_matrices`, x)
 }
 
-rcpparma_bothproducts <- function(x) {
-    .Call(`_RcppExample_rcpparma_bothproducts`, x)
+arma_innerproduct <- function(x) {
+    .Call(`_RcppExample_arma_innerproduct`, x)
+}
+
+arma_fastLm <- function(X, y) {
+    .Call(`_RcppExample_arma_fastLm`, X, y)
+}
+
+eigen_2_matrices <- function() {
+    .Call(`_RcppExample_eigen_2_matrices`)
 }
 

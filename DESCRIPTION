@@ -8,7 +8,7 @@ Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: More about what it does (maybe more than one line)
 License: MIT
 Imports: Rcpp (>= 1.0.6)
-LinkingTo: Rcpp, RcppArmadillo
+LinkingTo: Rcpp, RcppArmadillo, RcppEigen
 RoxygenNote: 7.1.0
 Roxygen: list(markdown = TRUE)
 Suggests: 
