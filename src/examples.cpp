@@ -1,11 +1,13 @@
 #include <Rcpp.h>
-#include <iostream>
 #include <vector>
 using namespace Rcpp;
 
+//' Hello world
+//' 
+//' @export
 // [[Rcpp::export]]
 void hello_world() {
-  std::cout << "Hello world!" << std::endl;
+  Rcpp:Rcout << "Hello world!\n";
 }
 
 // [[Rcpp::export]]

@@ -3,7 +3,8 @@
 
 // [[Rcpp::depends(RcppEigen)]]
 
-// Create two matrices and return them in a list
+//' Create two matrices and return them in a list
+//' @export
 // [[Rcpp::export]]
 std::vector<Eigen::MatrixXd> eigen_2_matrices() {
   Eigen::MatrixXd m1(2,2);

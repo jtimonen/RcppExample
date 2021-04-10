@@ -8,7 +8,10 @@ arma::mat arma_outerproduct(const arma::colvec & x) {
     return m;
 }
 
-// Outer products multiplied by different integers (1, ..., 3)
+//' Outer products multiplied by different integers (1, ..., 3)
+//' 
+//' @param x a vector
+//' @export
 // [[Rcpp::export]]
 arma::Cube<double> arma_3_matrices(const arma::colvec & x) {
     const int N = x.size();
